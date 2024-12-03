@@ -1,0 +1,93 @@
+.docsLinkContainer {
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+    padding-top: 30px;
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    .linkBox {
+        border: 1px solid #000000;
+        margin-bottom: 15px;
+        padding: 12px 25px;
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+            padding-bottom: 15px;
+        }
+        .metadata,
+        .spfLang,
+        .spfScrptvrsn {
+            padding: 15px 0;
+            border-bottom: 1px solid black;
+        }
+        .metadata {
+            p {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            a {
+                text-transform: none;
+            }
+        }
+        .spfLang {
+            p:nth-child(1) {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            p:nth-child(2) {
+                font-size: 17px;
+                text-transform: none;
+                font-weight: 400;
+                padding: 7px 0 1px 0;
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(150, 0, 90);
+            }
+            p:nth-child(3) {
+                font-size: 16px;
+                font-weight: 500;
+                padding-top: 6px;
+            }
+            p:nth-child(4) {
+                font-size: 16px;
+                font-weight: 500;
+                a {
+                    font-size: 17px;
+                    font-weight: 400;
+                    text-transform: none;
+                }
+            }
+        }
+        .spfScrptvrsn {
+            p {
+                font-size: 16px;
+                font-weight: 500;
+                a {
+                    font-size: 17px;
+                    font-weight: 400;
+                    text-transform: none;
+                }
+            }
+            p:nth-child(2) {
+                color: rgb(150, 0, 90);
+                padding-top: 6px;
+            }
+            p:nth-child(3) {
+                padding-bottom: 6px;
+            }
+            p:nth-child(5),
+            p:nth-child(6),
+            p:nth-child(7) {
+                text-transform: none;
+                font-weight: 400;
+                span {
+                    font-weight: 500;
+                    color: rgb(150, 0, 90);
+                }
+            }
+            p:nth-child(8) {
+                padding-top: 7px;
+            }
+        }
+    }
+}
