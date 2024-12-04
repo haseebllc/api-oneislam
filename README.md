@@ -31,6 +31,7 @@ https://api-oneislam.vercel.app/
 
 `Languages` : you can get supported languages from metadata route.  
 - "English" "Achinese" "Arabic" "Chinese_Traditional" "Urdu" "Indonesian" etc.
+- supported-languages Array : `https://raw.githubusercontent.com/haseebllc/api-oneislam/main/app/api/quran/%5B...slug%5D/LangArray.ts`
 
 `Versions` : there are three versions for the language:
 - `original` : for original script.
@@ -82,7 +83,7 @@ Adding language parameter will return metadata and all hadiths of book. It is la
  ```bash
   GET /api/hadith/{bookname}/{language}/{chunk(X)}
 ``` 
-chunks are usefull for large dataset they return data in chunks in our-case there are maximum 7 chunks `chunk1` , `chunk2` .... `chunk7` each chunk contain 1000 (one-thousand) hadiths but if the book have more than 7 thousan hadiths for example abudawud have 7500 hadiths the chunk7 contain 6000 to 7500 hadiths it have more than 1 thousand hadith due to maximum chunk limit and if abudawud have 300 hadiths it will be in chunk1 becuse chunk1 have 0 to 1000 hadiths and chunk2 will return erorr.
+chunks are usefull for large dataset they return data in chunks in our-case there are maximum 7 chunks `chunk1` , `chunk2` .... `chunk7` each chunk contain 1000 (one-thousand) hadiths but if the book have more than 7 thousan hadiths for example abudawud have 7500 hadiths the chunk7 contain 6000 to 7500 hadiths it have more than 1 thousand hadith due to maximum chunk limit and if abudawud have 300 hadiths it will be in chunk1 because chunk1 have 0 to 1000 hadiths and chunk2 will return erorr.
 
 **Example** : `https://api-oneislam.vercel.app/api/hadith/abudawud/english/chunk1`
 
