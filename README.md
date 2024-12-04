@@ -14,13 +14,13 @@ https://api-oneislam.vercel.app/
 ```
 
 #### 2. Quran Metadata
- ```javascript
+ ```bash
   GET /api/quran
 ```
 **try it here** : `https://api-oneislam.vercel.app/api/quran`
 
 #### 3. Quran in specific Language
- ```javascript
+ ```bash
   GET /api/quran/{Language}/{Version}
 ``` 
 | Parameter | Type | Description  |
@@ -40,7 +40,7 @@ https://api-oneislam.vercel.app/
 **Example** : `https://api-oneislam.vercel.app/api/quran/Arabic/original`
 
  #### 4. Quran specific Chapter
- ```javascript
+ ```bash
   GET /api/quran/{Language}/{Version}/{chapter}
 ``` 
 **Example** : `https://api-oneislam.vercel.app/api/quran/Arabic/original/114`
@@ -55,14 +55,14 @@ https://api-oneislam.vercel.app/
 ```
 
 #### 2. Hadith all-books Metadata
- ```javascript
+ ```bash
   GET /api/hadith
 ```
 **try it here** : `https://api-oneislam.vercel.app/api/hadith`
 
 
 #### 3. Hadith specefic-book Metadata
- ```javascript
+ ```bash
   GET /api/hadith/{bookname}
 ```
 **Example** : `https://api-oneislam.vercel.app/api/hadith/abudawud`
@@ -70,25 +70,25 @@ https://api-oneislam.vercel.app/
 
 
  #### 4. Specefic-Book Metadata & Hadiths
- ```javascript
+ ```bash
   GET /api/hadith/{bookname}/{language}
 ``` 
 Adding language parameter will return metadata and all hadiths of book. It is large dataset because every hadith book hadiths are around 5000 to 7000.
 
-**Example** : `https://api-oneislam.vercel.app/api/hadith/abudawud`
+**Example** : `https://api-oneislam.vercel.app/api/hadith/abudawud/english`
 
 
  #### 5. Specefic-Book Hadiths in chunk
- ```javascript
+ ```bash
   GET /api/hadith/{bookname}/{language}/{chunk(X)}
 ``` 
 chunks are usefull for large dataset they return data in chunks in our-case there are maximum 7 chunks `chunk1` , `chunk2` .... `chunk7` each chunk contain 1000 (one-thousand) hadiths but if the book have more than 7 thousan hadiths for example abudawud have 7500 hadiths the chunk7 contain 6000 to 7500 hadiths it have more than 1 thousand hadith due to maximum chunk limit and if abudawud have 300 hadiths it will be in chunk1 becuse chunk1 have 0 to 1000 hadiths and chunk2 will return erorr.
 
-**Example** : `https://api-oneislam.vercel.app/api/hadith/abudawud/chunk1`
+**Example** : `https://api-oneislam.vercel.app/api/hadith/abudawud/english/chunk1`
 
 
  #### 6. Specefic-Book Specific-Hadith or Verse
- ```javascript
+ ```bash
   GET /api/hadith/{bookname}/{language}/{verse}/{number}
 ``` 
 **Example** : `https://api-oneislam.vercel.app/api/hadith/abudawud/verse/100`
@@ -125,6 +125,7 @@ useEffect(() => {
 ```
 
 - fetch data based on parameters
+ 
 ```javascript
 import axios from "axios";
 const apiBase = "https://api-oneislam.vercel.app";
