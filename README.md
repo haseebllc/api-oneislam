@@ -107,7 +107,7 @@ Each Hadith book contains multiple chapters. To avoid large data loads, it is re
 #### 6. Specific Book, Specific Hadith or Verse
 
 ```bash
- GET /api/hadith/{bookname}/{language}/{verse(X)}
+ GET /api/hadith/{bookname}/{language}/{verse/x}
 ```
 
 This endpoint returns a specific Hadith or verse from the desired book.
