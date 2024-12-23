@@ -97,12 +97,12 @@ Including the language parameter returns both metadata and all Hadiths from the 
 #### 5. Specific Book, Specific Chapter
 
 ```bash
- GET /api/hadith/{bookname}/{language}/{chapter(X)}
+ GET /api/hadith/{bookname}/{language}/{chapter/x}
 ```
 
 Each Hadith book contains multiple chapters. To avoid large data loads, it is recommended to fetch data in chunks. This method loads quickly due to smaller datasets, and you can fetch the next chapter when needed.
 
-**Example**: [https://api-oneislam.vercel.app/api/hadith/abudawud/english/chapter1](https://api-oneislam.vercel.app/api/hadith/abudawud/english/chapter1)
+**Example**: [https://api-oneislam.vercel.app/api/hadith/abudawud/english/chapter/1](https://api-oneislam.vercel.app/api/hadith/abudawud/english/chapter/1)
 
 #### 6. Specific Book, Specific Hadith or Verse
 
@@ -112,7 +112,7 @@ Each Hadith book contains multiple chapters. To avoid large data loads, it is re
 
 This endpoint returns a specific Hadith or verse from the desired book.
 
-**Example**: [https://api-oneislam.vercel.app/api/hadith/abudawud/english/verse1000](https://api-oneislam.vercel.app/api/hadith/abudawud/english/verse1000)
+**Example**: [https://api-oneislam.vercel.app/api/hadith/abudawud/english/verse/1](https://api-oneislam.vercel.app/api/hadith/abudawud/english/verse/1)
 
 ---
 
