@@ -42,7 +42,14 @@ export async function GET(request: Request, { params }: ParamsType) {
     if (!language_slg) {
       const apiURL = `https://raw.githubusercontent.com/haseebllc/quran-hadith-json/refs/heads/main/hadith/book-wise/${book_slg}/metadata.json`;
       const jsonData = await fetchData(apiURL);
-      return NextResponse.json(jsonData, { status: 200 });
+      return NextResponse.json(jsonData, {
+        status: 200,
+        headers: {
+          "Access-Control-Allow-Origin": "*", // Allow all origins
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS", // Allow methods
+          "Access-Control-Allow-Headers": "Content-Type", // Allow headers
+        },
+      });
     }
 
     // Language existence check
@@ -57,7 +64,14 @@ export async function GET(request: Request, { params }: ParamsType) {
     if (!chapter_nd_verse_string_slg) {
       const apiURL = `https://raw.githubusercontent.com/haseebllc/quran-hadith-json/refs/heads/main/hadith/book-wise/${book_slg}/${language_slg}.json`;
       const jsonData = await fetchData(apiURL);
-      return NextResponse.json(jsonData, { status: 200 });
+      return NextResponse.json(jsonData, {
+        status: 200,
+        headers: {
+          "Access-Control-Allow-Origin": "*", // Allow all origins
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS", // Allow methods
+          "Access-Control-Allow-Headers": "Content-Type", // Allow headers
+        },
+      });
     }
 
     // Handling chapter-verse slug request
@@ -71,7 +85,14 @@ export async function GET(request: Request, { params }: ParamsType) {
             { status: 404 }
           );
         }
-        return NextResponse.json(data, { status: 200 });
+        return NextResponse.json(data, {
+          status: 200,
+          headers: {
+            "Access-Control-Allow-Origin": "*", // Allow all origins
+            "Access-Control-Allow-Methods": "GET, POST, OPTIONS", // Allow methods
+            "Access-Control-Allow-Headers": "Content-Type", // Allow headers
+          },
+        });
       }
 
       return NextResponse.json(
@@ -108,7 +129,14 @@ export async function GET(request: Request, { params }: ParamsType) {
               { status: 404 }
             );
           }
-          return NextResponse.json(verseElement, { status: 200 });
+          return NextResponse.json(verseElement, {
+            status: 200,
+            headers: {
+              "Access-Control-Allow-Origin": "*", // Allow all origins
+              "Access-Control-Allow-Methods": "GET, POST, OPTIONS", // Allow methods
+              "Access-Control-Allow-Headers": "Content-Type", // Allow headers
+            },
+          });
         }
 
         return NextResponse.json(
