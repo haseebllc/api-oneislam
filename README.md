@@ -13,6 +13,9 @@ This API provides access to the **`Quran`** in over 95 languages and various **`
 ```bash
 https://api-oneislam.vercel.app/
 ```
+```bash
+https://islamapi.vercel.app/
+```
 
 #### 2. Quran Metadata
 
